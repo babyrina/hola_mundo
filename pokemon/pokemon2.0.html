@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url("https://c.wallhere.com/photos/5b/88/8_bit_sky_clouds_pixels_landscape_artwork_pixel_art-1360159.jpg!d");
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: unset; /*lo cambié x siaca, antes era no-repeat*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #TITULO {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+        gap: 20px;
+      }
+      #pokemon {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Mostrar 4 columnas */
+        gap: 20px; /* Espacio entre cada columna */
+        max-width: 800px; /* Ancho máximo del contenedor */
+        margin-top: 20px;
+      }
+      .pokemon-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; /* Alinear texto al centro */
+      }
+      .pokemon-container img {
+        max-width: 200px;
+      }
+      .tipo-pokemon {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      .tipo-pokemon img {
+        max-width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="TITULO">
+      <img
+        src="/pokemon/pokeball.png"
+        alt="Pokeball image"
+        style="max-width: 100px"
+      />
+      <img
+        src="/pokemon/banner.png"
+        alt="Pokemon banner"
+        style="max-width: 300px"
+      />
+      <img
+        src="/pokemon/pokeball.png"
+        alt="Pokeball image"
+        style="max-width: 100px"
+      />
+    </div>
+    <br />
+    <div id="pokemon">
+      <!-- Primer grupo de 4 Pokémon -->
+      <div class="pokemon-container">
+        <img src="/pokemon/bulbasour/Bulbasaur.webp" alt="Bulbasaur" />
+        <div class="tipo-pokemon">
+          <img
+            src="/pokemon/bulbasour/Tipo_veneno.webp"
+            alt="Tipo pokemon veneno"
+          />
+          <img
+            src="/pokemon/bulbasour/Tipo_planta.webp"
+            alt="Tipo pokemon planta"
+          />
+        </div>
+      </div>
+      <div class="pokemon-container">
+        <img src="/pokemon/charmander/Charmander.webp" alt="Charmander" />
+        <div class="tipo-pokemon">
+          <img
+            src="/pokemon/charmander/Tipo_fuego.webp"
+            alt="Tipo pokemon fuego"
+          />
+        </div>
+      </div>
+      <div class="pokemon-container">
+        <img src="/pokemon/caterpie/Caterpie.webp" alt="Caterpie" />
+        <div class="tipo-pokemon">
+          <img
+            src="/pokemon/caterpie/Tipo_bicho.webp"
+            alt="Tipo pokemon bicho"
+          />
+        </div>
+      </div>
+      <div class="pokemon-container">
+        <img src="/pokemon/squirtle/Squirtle.webp" alt="Squirtle" />
+        <div class="tipo-pokemon">
+          <img src="/pokemon/squirtle/Tipo_agua.webp" alt="Tipo pokemon agua" />
+        </div>
+      </div>
+      <div class="pokemon-container">
+        <img src="\pokemon\abra\Abra.webp" alt="pokemon abra" />
+        <div class="tipo-pokemon">
+          <img
+            src="\pokemon\abra\tipo_psiquico.webp"
+            alt="Tipo pokemon psiquico"
+          />
+        </div>
+      </div>
+      <div class="pokemon-container">
+        <img src="/pokemon\clefairy\Clefairy.webp" alt="pokemon clefairy" />
+        <div class="tipo-pokemon">
+          <img
+            src="/pokemon\clefairy\Tipo_hada.webp"
+            alt="Tipo pokemon Tipo_hada"
+          />
+        </div>
+      </div>
+      <div class="pokemon-container">
+        <img src="\pokemon\diglet\Diglett.webp" alt="pokemon diglett" />
+        <div class="tipo-pokemon">
+          <img
+            src="/pokemon\diglet\Tipo_tierra.webp"
+            alt="Tipo pokemon Tipo_tierra"
+          />
+        </div>
+      </div>
+      <div class="pokemon-container">
+        <img src="\pokemon\pikachu\Pikachu.webp" alt="pokemon pikachu" />
+        <div class="tipo-pokemon">
+          <img
+            src="\pokemon\pikachu\tipo_electrico.webp"
+            alt="Tipo pokemon electico"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

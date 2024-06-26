@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulario</title>
+  </head>
+  <body>
+  <section>
+    <div class="head">
+      <h1>Payment form</h1>
+    </div>
+    <form action="/submit" method="post">
+      <div class="card">
+        <p>
+          Card<br /><input
+            type="text"
+            name="cardnumber"
+            value=""
+            placeholder="XXXX-XXXX-XXXX-XXXX"
+            maxlength="16" 
+            pattern="\d{1,9}"
+            inputmode="numeric" 
+            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 16);"
+            required
+          />
+        </p>
+        <p>
+          CVC<br /><input
+            type="text"
+            name="cardCVC"
+            value=""
+            size="3"
+            placeholder="CVC"
+            maxlength="3" pattern="\d{1,9}"inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 3);"
+            required
+          />
+        </p>
+        <p>
+          Amount<br /><input
+            type="text"
+            name="amount"
+            value=""
+            placeholder="$"
+            size="10"
+            maxlength="9" pattern="\d{1,9}"inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 9);"
+            required
+          />
+        </p>
+      </div>
+      <div class="name">
+    <p>
+      First Name<br />
+      <input name="Name" type="text" value="" size="38" 
+             oninput="this.value = this.value.replace(/[^a-zA-Z\s-]/g, '').slice(0, 50);" 
+             pattern="[a-zA-Z\s-]{2,}" 
+             title="El nombre debe contener al menos 2 letras." 
+             required />
+    </p>
+      <p>Last Name<br /><input name="Lastname" type="”text”" value=""size='38' oninput="this.value = this.value.replace(/[^a-zA-Z\s-]/g, '').slice(0, 50);" required/></p>
+      </div>
+      <div class="city">
+      <p>Country<br>
+      <select name="pais" required>
+      <option value="" disabled selected></option>
+      <option value="chile">Chile</option>
+      <option value="china">China</option>
+      </select>
+    </p>
+      <p>State  <br>  <select name="ciudad" required>
+      <option value="" disabled selected></option>
+      <option value="santiago">Santiago</option>
+      <option value="valparaiso">Valparaíso</option>
+      <option value="concepcion">Concepción</option>
+      <option value="la-serena">La Serena</option>
+      <option value="antofagasta">Antofagasta</option>
+      <option value="vina-del-mar">Viña del Mar</option>
+      <option value="puerto-montt">Puerto Montt</option>
+      <option value="iquique">Iquique</option>
+      <option value="temuco">Temuco</option>
+      <option value="punta-arenas">Punta Arenas</option>
+      <option value="copiapo">Copiapó</option>
+      <option value="arica">Arica</option>
+    </select></p>
+      <p>Postal Code<br /><input name="postalcode" type="”text”" value=""
+        maxlength="10" pattern="\d{1,9}"inputmode="numeric" oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10);" required/></p>
+      </div>
+      <div class="message">
+        <p>Message<br>
+        <textarea class='message2' name="comments" placeholder="Add any notes here." maxlength="300"></textarea></p>
+
+      </div>
+      <div class="enviar">
+      <input class=enviar2 type="submit" value="Enviar" />
+      </div>
+      </form>
+  </body>
+</html>

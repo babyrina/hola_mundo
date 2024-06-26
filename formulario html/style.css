@@ -1,0 +1,61 @@
+body {
+  margin: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(https://t3.ftcdn.net/jpg/03/11/67/42/360_F_311674258_8BVceOKrg41rSMHmV1pWt0PJGsClYyjX.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+section {
+  width: 600px;
+  margin: auto;
+  background-color: rgb(255, 231, 251, 0.3);
+  padding: 10px;
+}
+.head {
+  color: rgb(136, 80, 128);
+  background-color: rgb(255, 233, 252);
+  padding: 10px;
+  justify-content: center;
+  display: flex;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.city {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.message2 {
+  width: 400px;
+  height: 60px;
+}
+.enviar {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
+}
+.enviar2 {
+  width: 100px;
+  height: 30px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(253, 198, 244);
+  border: 10;
+  border-color: rgb(255, 0, 208);
+}
+.city select {
+  width: 150px;
+  height: 25px;
+}

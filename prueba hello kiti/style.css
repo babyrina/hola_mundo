@@ -1,0 +1,57 @@
+:root {
+  --header-height: 80px;
+  --header-logo-width: 185px;
+  --scroll-width-01: 121.8rem;
+  --scroll-width-02: 1753px;
+  --home-mv-default-width: calc((120 / 180) * 100%);
+  --home-mv-default-position: 80px;
+  --home-mv-scroll-padding: 300px;
+  --home-mv-scroll-padding-recommendation: 300;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: var(--header-height);
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: var(--header-logo-width);
+}
+
+.home-mv {
+  padding: var(--home-mv-scroll-padding);
+  background-color: #f0f0f0;
+  height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Asegura que el contenido que se desplaza fuera del contenedor no sea visible */
+}
+
+.texto-movido {
+  position: absolute;
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  animation: move-text 10s linear infinite; /* Llama a la animación */
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Definir la animación */
+@keyframes move-text {
+  0% {
+    left: 100%; /* Comienza fuera de la vista en el lado derecho */
+  }
+  100% {
+    left: -100%; /* Se mueve fuera de la vista en el lado izquierdo */
+  }
+}
